@@ -24,7 +24,7 @@ function App() {
     if (disabledCards.includes(number)) return;
     setSelectedCard(number);
     setDisabledCards([...disabledCards, number]);
-    setTimeLeft(20); // Reset timer to 20 seconds
+    setTimeLeft(20); 
   };
 
   useEffect(() => {
@@ -32,9 +32,9 @@ function App() {
 
     const timer = setTimeout(() => {
       setTimeLeft((prev) => prev - 1);
-    }, 1000);
+    }, 2000);
 
-    return () => clearTimeout(timer); // Clean up on re-render
+    return () => clearTimeout(timer);
   }, [timeLeft]);
 
   const selectedQuestion = questions.find(q => q.no === selectedCard);
