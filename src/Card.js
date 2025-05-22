@@ -1,6 +1,7 @@
-const Card = ({number, onClick}) =>{
+const Card = ({number, onClick, disabled}) =>{
+    console.log("***disabled state", disabled)
     return (
-        <div className="card" onClick={onClick}>
+        <div className={disabled ? "card disabled": "card"} onClick={onClick}>
             <p>{number}</p>
         </div>
     )

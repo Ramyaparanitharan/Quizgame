@@ -25,3 +25,9 @@
 .block {
   display: block;
 }
+.card.disabled {
+  pointer-events: none;
+  opacity: 0.1;
+  background-color: gray;
+  
+}
